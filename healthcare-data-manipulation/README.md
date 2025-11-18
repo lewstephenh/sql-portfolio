@@ -7,5 +7,5 @@
 
 
 ## Purpose
-This program manipulates synthetic healthcare data stored on SQL Server in various ways.
+This program manipulates synthetic healthcare data stored on Microsoft SQL Server in various ways.
 
