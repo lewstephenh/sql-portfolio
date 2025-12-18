@@ -1,5 +1,10 @@
 # California High School Analysis Table
 
+## Description
+Developed a SQL-based data transformation pipeline to produce a high-school–level analytical table, consolidating enrollment, socioeconomic, and academic performance data into a single record per school. The workflow leverages layered CTEs, window functions, and conditional logic to deduplicate and normalize statewide education datasets, explicitly handling schools with zero socioeconomically disadvantaged students. High schools are identified via graduation rate records, and math and ELA distance-from-standard metrics are joined to enable analysis of academic performance relative to socioeconomic composition.
+
+Tech stack: SQL, CTEs, window functions, joins, data validation, education data analytics.
+
 ## File Information
 | Program Name              | Last Updated | Purpose                                        |
 |---------------------------|--------------|------------------------------------------------|
