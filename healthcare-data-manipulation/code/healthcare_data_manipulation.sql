@@ -24,7 +24,7 @@ WITH work_denial_rate AS (
 	SELECT *,
 		(CASE
 			WHEN claim_status = 'Denied' THEN 100.0
-			ELSE 0.0
+            WHEN claim_status = 'Paid' THEN 0.0
 		 END) AS denial_rate
 	FROM tab_claim_data
 )
