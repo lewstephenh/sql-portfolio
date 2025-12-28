@@ -66,14 +66,14 @@ DROP TABLE IF EXISTS tab_claim_data;
 SELECT cd.*,
 	icd.[description] AS diagnosis_description
 INTO tab_claim_data
-FROM SyntheticHealthcareData.dbo.claim_data cd
-LEFT JOIN SyntheticHealthcareData.dbo.icd_codes icd
+FROM claim_data cd
+LEFT JOIN icd_codes icd
 ON cd.diagnosis_code = icd.icd_code;
 GO
 
 -- VALIDATE DATA
 -- Check that all diagnosis codes successfully map to ICD-10.
-CREATE OR ALTER VIEW check_diagnosis_codes AS
+CREATE OR ALTER VIEW vw_diagnosis_codes_check AS
 SELECT COUNT(*) AS unmapped_codes
 FROM tab_claim_data
 WHERE diagnosis_description IS NULL
